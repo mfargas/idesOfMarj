@@ -1,7 +1,9 @@
+@import url("https://use.typekit.net/sqa2xzt.css");
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.45em jeanne-moderno, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
