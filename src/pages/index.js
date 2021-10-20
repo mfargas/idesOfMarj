@@ -8,11 +8,9 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Ides of Marge</h1>
-    <p>Welcome to Margie's art site</p>
     <StaticImage
       src="../images/banner.png"
-      width={400}
+      width={1000}
       quality={95}
       formats={["auto", "webp", "avif"]}
       alt="Marjoree E. F. Banner with Logo"
