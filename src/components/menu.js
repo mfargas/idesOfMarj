@@ -1,18 +1,17 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
-const Menu = () => {
+class Menu extends React.Component {
+    render(){
     return(
-        <>
-            <Menu>
+            <menu>
                 <ul>
-                    <li> <Link to='/' /> </li>
-                    <li> <Link to='/' /> Blog</li>
+                    <li> <Link to='/'>Art</Link></li>
+                    <li> <Link to='/'> Blog</Link></li>
                 </ul>
-            </Menu>
-        </>
-    )
+            </menu>
+        );
+    }
 }
 
-export default Menu;
+export default Menu
