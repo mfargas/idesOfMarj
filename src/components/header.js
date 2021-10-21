@@ -3,35 +3,20 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import Menu from './menu'
 
+import * as styles from '../styles/header.module.css' 
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1250,
-        textAlign: `right`,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+  <header className={styles.header} >
+    <nav className={styles.headerNav}>
+      <h1 className={styles.logoContainer}>
         <Link
           to="/"
-          style={{
-            fontFamily: `jeanne-moderno-geometrique, serif`,
-            fontSize: `4rem`,
-            color: `#060864`,
-            textDecoration: `none`,
-          }}
-        >
+          className={styles.logo}>
           {siteTitle}
         </Link>
       </h1>
       <Menu />
-    </div>
+    </nav>
   </header>
 )
 

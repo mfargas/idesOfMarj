@@ -1,0 +1,21 @@
+.header{
+    margin-bottom: 1.45rem;
+}
+
+.headerNav{
+    margin: 0 auto;
+    max-width: 1250px;
+    text-align: right;
+    padding: 1.45rem 1.0875rem;
+}
+
+.logoContainer{
+    margin: 0;
+}
+
+.logo{
+    font-family: jeanne-moderno-geometrique, serif;
+    font-size: 4rem;
+    color: #060864;
+    text-decoration: none;
+}

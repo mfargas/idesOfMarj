@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,11 +23,12 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 1000,
           minHeight: `75vh`,
-          padding: `0 1rem 1rem`,
         }}>
           {children}
         </main>
-      <footer>
+      <footer style={{
+        marginBottom: `1.45rem`,
+      }}>
         <p>Developed by Marjoree E. F. © {new Date().getFullYear()}, Built with
           {` `}<a href="https://www.gatsbyjs.com">Gatsby</a></p>
       </footer>

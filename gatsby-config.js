@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ides of Marj`,
+    title: `ides of Marge`,
     description: `Website Created using Gatsby Starter`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -23,10 +23,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `#060864`,
         display: `minimal-ui`,
         icon: `src/images/logo-favIcon.png`, // This path is relative to the root of the site.
       },
