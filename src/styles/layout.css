@@ -6,6 +6,7 @@ html {
   font: 112.5%/1.45em jeanne-moderno, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  box-shadow: inset 0 0 0 1vw #060864;
 }
 body {
   margin: 0;

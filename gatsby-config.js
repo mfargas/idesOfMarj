@@ -25,7 +25,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#060864`,
         display: `minimal-ui`,
-        icon: `src/images/logo-favIcon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo-favIcon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -16,10 +16,6 @@ const IndexPage = () => (
       alt="Marjoree E. F. Banner with Logo"
       style={{ marginBottom: `1.45rem` }}
     />
-    <p>
-      <Link to="/page-2/">Generative Art</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
   </Layout>
 )
 

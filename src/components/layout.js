@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{ boxShadow: `inset 0 0 0 1vw #060864` }} >
+    <div >
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main style={{
           margin: `0 auto`,
@@ -26,9 +26,7 @@ const Layout = ({ children }) => {
         }}>
           {children}
         </main>
-      <footer style={{
-        marginBottom: `1.45rem`,
-      }}>
+      <footer style={{margin: `1rem`}}>
         <p>Developed by Marjoree E. F. © {new Date().getFullYear()}, Built with
           {` `}<a href="https://www.gatsbyjs.com">Gatsby</a></p>
       </footer>

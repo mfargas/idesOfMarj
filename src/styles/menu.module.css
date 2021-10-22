@@ -1,0 +1,14 @@
+.navMenu{
+    list-style: none;
+    text-align: left;
+    display: flex;
+}
+
+.navItem{
+    margin: 1rem;
+}
+
+.navLink{
+    text-decoration: none;
+    color: black;
+}
