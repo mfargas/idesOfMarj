@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import HomeHero from "../components/homeHero"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
@@ -16,6 +16,7 @@ const IndexPage = () => (
       alt="Marjoree E. F. Banner with Logo"
       style={{ marginBottom: `1.45rem` }}
     />
+    <HomeHero />
   </Layout>
 )
 
