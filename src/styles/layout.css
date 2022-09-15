@@ -1,20 +1,20 @@
-@import url("https://use.typekit.net/sqa2xzt.css");
+@import url("https://use.typekit.net/gaa8hjy.css");
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em jeanne-moderno, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  box-shadow: inset 0 0 0 1vw #060864;
+  /* box-shadow: inset 0 0 0 1vw #060864; */
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
+  font-family: utile-display, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -84,9 +84,9 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-family: utile-display, sans-serif;
+  font-weight: 700;
+  font-style: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;

@@ -2,13 +2,36 @@
     list-style: none;
     text-align: left;
     display: flex;
+    writing-mode: vertical-rl;
 }
 
 .navItem{
     margin: 1rem;
+    font-size: 1.5rem;
 }
 
 .navLink{
     text-decoration: none;
     color: black;
+}
+
+.navItem:hover{
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-name: underline;
+    animation-timing-function:cubic-bezier();
+}
+
+.navItem:active{
+    text-decoration: underline;
+}
+
+@keyframes underline{
+    0% {
+        text-decoration: none;
+        
+    }
+    100%{
+        text-decoration: underline;
+    }
 }

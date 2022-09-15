@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.galleryItem{
+    outline: 1px solid black;
+    height: 20rem;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+
+.galleryItem > a{
+    text-decoration: none;
+}
+
+.itemNum{
+    writing-mode: vertical-lr;
+    width: min-content;
+    position: absolute;
+    margin: 1rem 0.5rem;
+}
+
+.itemLink{
+    position: relative;
+    top: 20%;
+    left: 20%;
+}
