@@ -1,16 +1,16 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import Link from "next/link"
 import Menu from './menu'
 
-import * as styles from '../styles/header.module.css' 
+import * as styles from '../styles/header.module.css'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle = "ides of Marge" }) => (
   <header className={styles.header} >
     <nav className={styles.headerNav}>
       <h1 className={styles.logoContainer}>
         <Link
-          to="/"
+          href="/"
           className={styles.logo}>
           {siteTitle}
         </Link>
@@ -22,10 +22,6 @@ const Header = ({ siteTitle }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
