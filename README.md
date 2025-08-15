@@ -1,10 +1,12 @@
-# ides of Marge
+# BUILDING MARJIELA
 
-Artistic portfolio and creative blog by Marjoree E. F. - Exploring the intersection of art, technology, and creative expression.
+Artistic and creative blog by Marjoree - exploring the intersection of art, technology, and creative expression.
+
+Website: [marjiela.com](https://marjiela.com)
 
 ## 🎨 About
 
-This is a Gatsby.js-powered website showcasing generative art, creative coding projects, and thoughts on the intersection of art and technology. Built with modern web technologies and designed for optimal performance and user experience.
+This is a Next.js-powered website showcasing generative art, creative coding projects, and thoughts on the intersection of art and technology. Built with modern web technologies and designed for optimal performance and user experience.
 
 ## ✨ Features
 
@@ -19,7 +21,7 @@ This is a Gatsby.js-powered website showcasing generative art, creative coding p
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
@@ -40,59 +42,69 @@ This is a Gatsby.js-powered website showcasing generative art, creative coding p
 3. **Start development server**
 
    ```bash
-   npm run develop
+   npm run dev
    ```
 
 4. **Open your browser**
-   Navigate to `http://localhost:8000`
+   Navigate to `http://localhost:3000`
 
 ## 📁 Project Structure
 
 ```
 idesOfMarj/
 ├── src/
-│   ├── components/          # React components
+│   ├── components/         # React components
 │   │   ├── layout.js       # Main layout wrapper
 │   │   ├── header.js       # Site header with navigation
 │   │   ├── homeHero.js     # Homepage hero section
 │   │   ├── artProjects.js  # Art gallery component
-│   │   └── menu.js         # Navigation menu
-│   ├── pages/              # Gatsby pages
+│   │   ├── menu.js         # Navigation menu
+│   │   ├── sidebar.js      # Sidebar navigation
+│   │   └── seo.js          # SEO component
+│   ├── pages/              # Next.js pages
+│   │   ├── _app.js         # App wrapper
 │   │   ├── index.js        # Homepage
 │   │   ├── art.js          # Art gallery page
+│   │   ├── art/[id].js     # Individual art project page
 │   │   ├── blog.js         # Blog listing page
-│   │   └── about.js        # About page
+│   │   ├── about.js        # About page
+│   │   └── 404.js          # 404 error page
 │   ├── styles/             # CSS modules
 │   │   ├── layout.css      # Global styles
 │   │   ├── header.module.css
 │   │   ├── homeHero.module.css
 │   │   ├── artgallery.module.css
 │   │   ├── blog.module.css
-│   │   └── about.module.css
+│   │   ├── about.module.css
+│   │   ├── menu.module.css
+│   │   └── sidebar.module.css
 │   ├── images/             # Static images
-│   └── content/            # Content files
-│       ├── blog/           # Blog posts (markdown)
-│       └── art/            # Art project data
-├── gatsby-config.js        # Gatsby configuration
+│   ├── content/            # Content files
+│   │   ├── blog/           # Blog posts (markdown)
+│   │   └── art/            # Art project data
+│   └── data/               # Data files
+│       └── artProjects.js  # Art projects data
+├── next.config.js          # Next.js configuration
 ├── package.json            # Dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
 └── README.md              # This file
 ```
 
 ## 🛠️ Available Scripts
 
-- `npm run develop` - Start development server
+- `npm run dev` - Start development server
 - `npm run build` - Build for production
-- `npm run serve` - Serve production build
-- `npm run clean` - Clear cache and public folders
-- `npm run format` - Format code with Prettier
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
 
 ## 🎯 Key Technologies
 
-- **Gatsby.js** - React-based static site generator
+- **Next.js** - React-based full-stack framework
 - **React** - UI library
 - **CSS Modules** - Scoped styling
-- **Gatsby Image** - Optimized image handling
-- **GraphQL** - Data querying
+- **TypeScript** - Type-safe JavaScript
+- **Markdown** - Content management
 
 ## 🌐 Deployment
 
@@ -103,17 +115,17 @@ This site is configured for deployment on AWS Amplify:
 1. Connect your GitHub repository to AWS Amplify
 2. Configure build settings:
    - Build command: `npm run build`
-   - Publish directory: `public`
+   - Publish directory: `.next`
 3. Deploy automatically on push to main branch
 
 ### Other Platforms
 
-The site can be deployed to any static hosting platform:
+The site can be deployed to any platform that supports Next.js:
 
+- Vercel (recommended for Next.js)
 - Netlify
-- Vercel
-- GitHub Pages
-- Firebase Hosting
+- Railway
+- DigitalOcean App Platform
 
 ## 📝 Content Management
 
@@ -131,7 +143,7 @@ The site can be deployed to any static hosting platform:
 
 ### Adding Art Projects
 
-1. Add project data to `src/components/artProjects.js`
+1. Add project data to `src/data/artProjects.js`
 2. Include images in `src/images/`
 3. Update gallery component as needed
 
@@ -157,9 +169,9 @@ This project is licensed under the MIT License.
 
 **Marjoree E. F.**
 
-- Website: [idesofmarge.com](https://idesofmarge.com)
+- Website: [marjiela.com](https://marjiela.com)
 - GitHub: [@marjoreefargas](https://github.com/marjoreefargas)
 
 ---
 
-Built with ❤️ using Gatsby.js
+Built with ❤️ using Next.js
