@@ -1,0 +1,17 @@
+.mainContent {
+  min-height: calc(100vh - 100px);
+  max-width: none;
+}
+
+.footer {
+  margin-left: 250px; /* Account for sidebar width */
+  padding: 1rem 2rem;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
+}
+@media (min-width: 769px) {
+  .mainContent {
+    margin-left: 250px; /* Account for sidebar width */
+    margin-top: 100px; /* Account for header height */
+  }
+}

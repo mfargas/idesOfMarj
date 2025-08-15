@@ -1,37 +1,50 @@
 .navMenu{
     list-style: none;
-    text-align: left;
+    text-align: center;
     display: flex;
-    writing-mode: vertical-rl;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navItem{
-    margin: 1rem;
-    font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .navLink{
     text-decoration: none;
-    color: black;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
-.navItem:hover{
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-name: underline;
-    animation-timing-function:cubic-bezier();
+.navLink:hover{
+    color: #060864;
+    background-color: #f0f0f0;
 }
 
-.navItem:active{
+.navItem:active .navLink{
     text-decoration: underline;
 }
 
-@keyframes underline{
-    0% {
-        text-decoration: none;
-        
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .navMenu{
+        flex-direction: row;
+        gap: 1rem;
     }
-    100%{
-        text-decoration: underline;
+    
+    .navItem{
+        font-size: 1rem;
+    }
+    
+    .navLink{
+        padding: 0.25rem 0.5rem;
     }
 }

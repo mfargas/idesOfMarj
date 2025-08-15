@@ -1,21 +1,20 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import * as styles from "../styles/layout.module.css"
 
 import Header from "./header"
+import Sidebar from "./sidebar"
 
 const Layout = ({ children }) => {
   return (
-    <div >
-      <Header siteTitle="ides of Marge" />
-      <main style={{
-        margin: `0 auto`,
-        maxWidth: 1000,
-        minHeight: `75vh`,
-      }}>
+    <div>
+      <Header siteTitle="marjiela" />
+      <Sidebar siteTitle="marjiela" />
+      <main className={styles.mainContent}>
         {children}
       </main>
-      <footer style={{ margin: `1rem` }}>
-        <p>Developed by Marjoree E. F. © {new Date().getFullYear()}</p>
+      <footer className={styles.footer}>
+        <p>Marjoree E. F. © {new Date().getFullYear()}</p>
       </footer>
     </div>
   )

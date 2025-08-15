@@ -8,7 +8,7 @@ const HomeHero = () => {
             <div className={styles.heroContent}>
                 <div className={styles.heroText}>
                     <h1 className={styles.heroTitle}>
-                        Welcome to ides of Marj
+                        MARJIELA
                     </h1>
                     <p className={styles.heroSubtitle}>
                         Exploring the intersection of art, technology, and creative expression
@@ -24,8 +24,9 @@ const HomeHero = () => {
                 </div>
                 <div className={styles.heroImage}>
                     <div className={styles.portraitPlaceholder}>
-                        <span>Marjoree E. F.</span>
-                        <small>Creative Technologist</small>
+                        <span>DEVELOPMENT</span>
+                        <small>ANIMATION</small>
+                        <small>DIGITAL ART</small>
                     </div>
                 </div>
             </div>

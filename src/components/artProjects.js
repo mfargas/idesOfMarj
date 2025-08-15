@@ -49,14 +49,14 @@ const ArtGallery = () => {
 
     return (
         <section className={styles.gallerySection}>
+            <div className={styles.mainHeader}>
+                <h1 className={styles.galleryTitle}>ART</h1>
+            </div>
             {/* Featured Projects Section */}
             {selectedCategory === 'All' && !searchQuery && (
                 <div style={{ marginBottom: '4rem' }}>
                     <div className={styles.galleryHeader}>
-                        <h2 className={styles.galleryTitle}>Featured Projects</h2>
-                        <p className={styles.galleryDescription}>
-                            Highlighted works showcasing the intersection of art and technology
-                        </p>
+                        <h2 className={styles.galleryTitle} style={{ fontSize: '2rem' }}>FEATURED</h2>
                     </div>
                     <div className={styles.container}>
                         {featuredProjects.map((project) => (
@@ -101,7 +101,7 @@ const ArtGallery = () => {
                         ? `Search Results for "${searchQuery}"`
                         : selectedCategory === 'All'
                             ? 'All Projects'
-                            : `${selectedCategory} Projects`
+                            : `${selectedCategory}`
                     }
                 </h2>
                 <p className={styles.galleryDescription}>

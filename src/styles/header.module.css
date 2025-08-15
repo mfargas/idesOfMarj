@@ -1,12 +1,24 @@
 .header{
-    margin-bottom: 1.45rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1001;
+    margin-bottom: 0;
 }
 
 .headerNav{
     margin: 0 auto;
-    max-width: 1250px;
+    max-width: 1400px;
     text-align: right;
     padding: 1.45rem 1.0875rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .logoContainer{
@@ -15,7 +27,27 @@
 
 .logo{
     font-family: marshmallow-fluff, sans-serif;
-    font-size: 8rem;
+    font-size: 4rem;
     color: #060864;
     text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .header {
+        position: static;
+        height: auto;
+    }
+    
+    .headerNav {
+        text-align: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    
+    .logo {
+        font-size: 3rem;
+    }
 }

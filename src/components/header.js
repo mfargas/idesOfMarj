@@ -1,11 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import Link from "next/link"
-import Menu from './menu'
 
 import * as styles from '../styles/header.module.css'
 
-const Header = ({ siteTitle = "ides of Marge" }) => (
+const Header = ({ siteTitle = "marjiela" }) => (
   <header className={styles.header} >
     <nav className={styles.headerNav}>
       <h1 className={styles.logoContainer}>
@@ -15,7 +14,6 @@ const Header = ({ siteTitle = "ides of Marge" }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Menu />
     </nav>
   </header>
 )

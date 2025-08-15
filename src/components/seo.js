@@ -3,7 +3,7 @@ import * as React from "react"
 const Seo = ({ title }) => {
     return (
         <>
-            <title>{title ? `${title} | ides of Marge` : `ides of Marge`}</title>
+            <title>{title ? `${title} | marjiela` : `marjiela`}</title>
             <meta name="description" content="Artistic portfolio and creative blog by Marjoree E. F. - Exploring art, technology, and creative expression" />
             <meta name="author" content="Marjoree E. F." />
             <meta property="og:title" content={title ? `${title} | ides of Marge` : `ides of Marge`} />

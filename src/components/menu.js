@@ -11,10 +11,10 @@ const Menu = () => {
                     <Link className={styles.navLink} href='/art'> GALLERY </Link>
                 </li>
                 <li className={styles.navItem}>
-                    <Link className={styles.navLink} href='/blog'> BLOG </Link>
+                    <Link className={styles.navLink} href='/blog'> IDES </Link>
                 </li>
                 <li className={styles.navItem}>
-                    <Link className={styles.navLink} href='/about'> ABOUT </Link>
+                    <Link className={styles.navLink} href='/about'> MARJ </Link>
                 </li>
             </ul>
         </menu>
