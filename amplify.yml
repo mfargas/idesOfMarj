@@ -7,6 +7,12 @@ frontend:
     build:
       commands:
         - npm run build
+    postBuild:
+      commands:
+        - |
+          if [ ! -f out/required-server-files.json ]; then
+            echo '{"version":3,"routes":{}}' > out/required-server-files.json
+          fi
   artifacts:
     baseDirectory: out
     files:
