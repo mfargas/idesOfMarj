@@ -4,21 +4,22 @@
     left: 0;
     right: 0;
     height: 100px;
-    background: white;
-    border-bottom: 1px solid #e0e0e0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
     z-index: 1001;
     margin-bottom: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .headerNav{
     margin: 0 auto;
     max-width: 1400px;
-    text-align: right;
+    text-align: left;
     padding: 1.45rem 1.0875rem;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .logoContainer{
@@ -26,14 +27,15 @@
 }
 
 .logo{
-    font-family: bd-retrocentric, sans-serif;
+    font-family: "swear-display-cilati", serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     font-size: 4rem;
-    color: #060864;
+    color: var(--accent-color);
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: lowercase;
     line-height: 1;
+    transition: color 0.3s ease;
 }
 
 /* Mobile responsive */

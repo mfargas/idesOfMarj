@@ -2,8 +2,9 @@
 title: "The Intersection of Art and Technology"
 date: "2024-01-15"
 excerpt: "Exploring how digital tools are reshaping creative expression and artistic boundaries."
-category: "Art & Tech"
+category: "MEDIA STUDIES"
 readTime: "5 min read"
+published: true
 ---
 
 # The Intersection of Art and Technology

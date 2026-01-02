@@ -2,7 +2,7 @@
 title: "Media doesn't end anymore — it evolves"
 date: "2025-03-22"
 excerpt: "How digital media has moved from fixed endpoints to living, evolving experiences that grow and change over time."
-category: "MARJIELA — Media Studies"
+category: "Media Studies"
 readTime: "5 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "Designing for humans, not metrics"
 date: "2025-07-19"
 excerpt: "How Ollin prioritizes human well-being and genuine progress over vanity metrics and engagement optimization."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

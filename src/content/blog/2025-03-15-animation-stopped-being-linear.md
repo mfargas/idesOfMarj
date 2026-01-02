@@ -2,7 +2,7 @@
 title: "Animation stopped being linear"
 date: "2025-03-15"
 excerpt: "The shift from linear timelines to state-based, interactive animation systems in modern digital experiences."
-category: "MARJIELA — Media Studies"
+category: "Media Studies"
 readTime: "6 min read"
 ---
 

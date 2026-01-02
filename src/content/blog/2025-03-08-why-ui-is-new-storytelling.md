@@ -2,7 +2,7 @@
 title: "Why UI is the new storytelling"
 date: "2025-03-08"
 excerpt: "How user interfaces have evolved from functional tools into narrative experiences that guide and engage users."
-category: "MARJIELA — Media Studies"
+category: "Media Studies"
 readTime: "6 min read"
 ---
 

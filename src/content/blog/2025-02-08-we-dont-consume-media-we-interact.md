@@ -2,7 +2,7 @@
 title: "We don't consume media — we interact with it"
 date: "2025-02-08"
 excerpt: "The paradigm shift from passive consumption to active participation in modern media experiences."
-category: "MARJIELA — Media Studies"
+category: "Media Studies"
 readTime: "5 min read"
 ---
 

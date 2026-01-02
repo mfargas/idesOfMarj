@@ -2,7 +2,7 @@
 title: "TikTok changed animation forever"
 date: "2025-02-15"
 excerpt: "How TikTok's format, algorithm, and culture fundamentally altered animation production, distribution, and consumption."
-category: "MARJIELA — Media Studies"
+category: "Media Studies"
 readTime: "7 min read"
 ---
 

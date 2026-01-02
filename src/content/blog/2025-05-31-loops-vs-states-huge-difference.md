@@ -2,7 +2,7 @@
 title: "Loops vs states — huge difference"
 date: "2025-05-31"
 excerpt: "Understanding the fundamental difference between looping animations and state-based systems, and when to use each approach."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "7 min read"
 ---
 

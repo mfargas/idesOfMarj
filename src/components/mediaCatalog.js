@@ -206,7 +206,12 @@ const MediaCatalog = () => {
 
   return (
     <div className={styles.catalogContainer}>
-      <h1 className={styles.pageTitle}>Media Catalog</h1>
+      <div className={styles.catalogHeader}>
+        <h1 className={styles.pageTitle}>MEDIA CATALOG</h1>
+        <p className={styles.catalogDescription}>
+          A unified view of all media across books, TV shows, games, and movies
+        </p>
+      </div>
       
       {usingSampleData && (
         <div className={styles.sampleDataNotice}>
@@ -290,7 +295,7 @@ const MediaCatalog = () => {
       ) : (
         <div 
           className={styles.kanbanBoard}
-          style={{ gridTemplateColumns: `repeat(${visibleColumns.length}, 1fr)` }}
+          style={{ gridTemplateColumns: `repeat(${visibleColumns.length}, minmax(0, 1fr))` }}
         >
           {visibleColumns.map(column => (
           <div

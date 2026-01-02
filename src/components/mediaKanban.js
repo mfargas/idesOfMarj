@@ -193,7 +193,12 @@ const MediaKanban = ({ mediaType, title }) => {
 
   return (
     <div className={styles.kanbanContainer}>
-      <h1 className={styles.pageTitle}>{title}</h1>
+      <div className={styles.kanbanHeader}>
+        <h1 className={styles.pageTitle}>{title.toUpperCase()}</h1>
+        <p className={styles.kanbanDescription}>
+          Track your media consumption across different states
+        </p>
+      </div>
       {usingSampleData && (
         <div className={styles.sampleDataNotice}>
           Using sample data - Connect Supabase to use your own media items

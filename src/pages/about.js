@@ -7,9 +7,12 @@ const AboutPage = () => (
     <Layout>
         <Seo title="About" />
         <div className={styles.aboutContainer}>
-            <header className={styles.aboutHeader}>
+            <div className={styles.aboutHeader}>
                 <h1 className={styles.aboutTitle}>ABOUT</h1>
-            </header>
+                <p className={styles.aboutSubtitle}>
+                    How often do you think about choice of media in its impact on the delivery of its message?
+                </p>
+            </div>
 
             <div className={styles.aboutContent}>
                 <div className={styles.aboutImage}>
@@ -19,9 +22,6 @@ const AboutPage = () => (
                 </div>
 
                 <div className={styles.aboutText}>
-                    <p style={{ fontFamily: 'swear-display-cilati', fontSize: '1.5rem', maxWidth: '60%' }}>
-                        How often do you think about choice of media in its impact on the delivery of its message?
-                    </p>
                     <p>
                         This is a space where I share my projects and thoughts on the intersection of art,
                         technology, and people. Born in 90's LA and grew up during the transition from VHS to DVD to streaming.

@@ -2,7 +2,7 @@
 title: "Art that only exists when you touch it"
 date: "2025-05-24"
 excerpt: "Exploring interactive art that requires user participation to exist, blurring the line between creator and audience."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "6 min read"
 ---
 

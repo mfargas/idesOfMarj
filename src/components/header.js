@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import Link from "next/link"
+import ThemeToggle from "./themeToggle"
 
 import * as styles from '../styles/header.module.css'
 
@@ -14,6 +15,7 @@ const Header = ({ siteTitle = "marjiela" }) => (
           {siteTitle}
         </Link>
       </h1>
+      <ThemeToggle />
     </nav>
   </header>
 )

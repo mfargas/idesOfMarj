@@ -2,7 +2,7 @@
 title: "This isn't UI — it's a character"
 date: "2025-06-14"
 excerpt: "How user interfaces can be designed as characters with personality, creating deeper emotional connections with users."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "7 min read"
 ---
 

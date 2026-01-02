@@ -2,7 +2,7 @@
 title: "Turning a static design into a system"
 date: "2025-04-19"
 excerpt: "The process of transforming static mockups into dynamic, interactive systems that respond and adapt."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "7 min read"
 ---
 

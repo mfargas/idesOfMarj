@@ -2,7 +2,7 @@
 title: "Why Ollin uses avatars instead of charts"
 date: "2025-06-21"
 excerpt: "How Ollin's avatar-based progress visualization creates more meaningful and engaging habit tracking compared to traditional charts."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "How Ollin adapts instead of nags"
 date: "2025-08-16"
 excerpt: "How Ollin's adaptive system responds to user behavior and context rather than using pushy notifications and reminders."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

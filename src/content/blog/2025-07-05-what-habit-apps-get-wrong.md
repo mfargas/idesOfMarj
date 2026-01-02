@@ -2,7 +2,7 @@
 title: "What most habit apps get wrong"
 date: "2025-07-05"
 excerpt: "Common pitfalls in habit-tracking app design and how Ollin addresses these issues with a human-centered approach."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "7 min read"
 ---
 

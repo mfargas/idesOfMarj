@@ -4,10 +4,11 @@
   top: 100px; /* Position below header */
   width: 250px;
   height: calc(100vh - 100px); /* Account for header height */
-  background: white;
-  border-right: 1px solid #e0e0e0;
+  background: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
   z-index: 1000;
   overflow-y: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .sidebarContent {
@@ -27,7 +28,7 @@
     height: auto;
     top: auto;
     border-right: none;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-color);
   }
   
   .sidebarContent {

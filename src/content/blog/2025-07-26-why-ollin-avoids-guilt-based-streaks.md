@@ -2,7 +2,7 @@
 title: "Why Ollin avoids guilt-based streaks"
 date: "2025-07-26"
 excerpt: "How Ollin's approach to streaks focuses on motivation rather than shame, creating a healthier relationship with habit tracking."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

@@ -2,7 +2,7 @@
 title: "From storyboard to interaction"
 date: "2025-05-10"
 excerpt: "How the design process evolves from static storyboards to interactive prototypes and final implementations."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "7 min read"
 ---
 

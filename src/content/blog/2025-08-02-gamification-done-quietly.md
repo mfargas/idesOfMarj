@@ -2,7 +2,7 @@
 title: "Gamification done quietly"
 date: "2025-08-02"
 excerpt: "How Ollin uses subtle gamification elements that enhance motivation without overwhelming or manipulating users."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

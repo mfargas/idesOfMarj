@@ -2,7 +2,7 @@
 title: "Why personalization matters more than features"
 date: "2025-08-09"
 excerpt: "How Ollin prioritizes personalization and adaptation over feature bloat, creating more meaningful user experiences."
-category: "MARJIELA — Ollin Highlights"
+category: "Ollin Highlights"
 readTime: "6 min read"
 ---
 

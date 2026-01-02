@@ -6,8 +6,10 @@
 .footer {
   margin-left: 250px; /* Account for sidebar width */
   padding: 1rem 2rem;
-  border-top: 1px solid #e0e0e0;
-  background: #f9f9f9;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 @media (min-width: 769px) {
   .mainContent {

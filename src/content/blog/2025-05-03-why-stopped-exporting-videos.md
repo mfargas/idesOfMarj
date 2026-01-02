@@ -2,7 +2,7 @@
 title: "Why I stopped exporting videos"
 date: "2025-05-03"
 excerpt: "The shift from pre-rendered video exports to real-time, interactive animation experiences in modern design work."
-category: "MARJIELA — Interactive Media"
+category: "Interactive Media"
 readTime: "6 min read"
 ---
 
