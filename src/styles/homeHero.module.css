@@ -22,19 +22,23 @@
 }
 
 .heroTitle {
-    font-family: marshmallow-fluff, sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-family: bd-retrocentric, sans-serif;
+    font-size: 3.75rem;
+    font-weight: 400;
+    font-style: normal;
     color: #060864;
     margin: 0;
     line-height: 1.1;
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
-    color: #666;
+    font-family: "swear-display-cilati", serif;
+    font-size: 1.75rem;
+    color: #000;
     margin: 0;
     line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .heroButtons {

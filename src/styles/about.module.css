@@ -22,13 +22,18 @@
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.1em;
-    font-weight: 800;
+    font-family: bd-retrocentric, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .aboutSubtitle {
-    font-size: 1.3rem;
-    color: #666;
+    font-family: "swear-display-cilati", serif;
+    font-size: 1.75rem;
+    color: #000;
     margin: 0;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .aboutContent {
@@ -90,13 +95,15 @@
     font-size: 2.5rem;
     color: #060864;
     margin: 0 0 1rem 0;
-    font-weight: 600;
+    font-family: bd-retrocentric, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .aboutText p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #444;
+    color: #000;
     margin: 0;
 }
 
@@ -105,7 +112,9 @@
     font-size: 1.5rem;
     color: #060864;
     margin: 0 0 1rem 0;
-    font-weight: 600;
+    font-family: bd-retrocentric, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .skillTags {

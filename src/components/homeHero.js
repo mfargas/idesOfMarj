@@ -14,10 +14,7 @@ const HomeHero = () => {
                         Exploring the intersection of art, technology, and creative expression
                     </p>
                     <div className={styles.heroButtons}>
-                        <Link href="/art" className={styles.primaryButton}>
-                            View Gallery
-                        </Link>
-                        <Link href="/blog" className={styles.secondaryButton}>
+                        <Link href="/blog" className={styles.primaryButton}>
                             Read Blog
                         </Link>
                     </div>

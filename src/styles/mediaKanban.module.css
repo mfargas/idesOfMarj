@@ -1,0 +1,289 @@
+.kanbanContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-family: "swear-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #000;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.filterSelect {
+  font-family: "swear-display", serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  color: #000;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.filterSelect:hover {
+  border-color: #060864;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #060864;
+  box-shadow: 0 0 0 3px rgba(6, 8, 100, 0.1);
+}
+
+.filterCheckbox {
+  margin-right: 0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  accent-color: #060864;
+}
+
+.clearFilters {
+  font-family: "swear-display", serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid #666;
+  border-radius: 6px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clearFilters:hover {
+  background: #666;
+  color: white;
+}
+
+.pageTitle {
+  font-family: bd-retrocentric, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  color: #060864;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.kanbanBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.column {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 500px;
+  border: 2px solid #e0e0e0;
+}
+
+.columnTitle {
+  font-family: bd-retrocentric, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #060864;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  text-transform: uppercase;
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 400px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 2px solid #e0e0e0;
+  cursor: move;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #060864;
+}
+
+.card:active {
+  cursor: grabbing;
+}
+
+.card.stayedWithMe {
+  border-color: #ff6b9d;
+  background: #fff5f8;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-family: bd-retrocentric, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: #000;
+  margin: 0;
+  flex: 1;
+}
+
+.stayedButton {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+.stayedButton:hover {
+  transform: scale(1.2);
+  color: #ff6b9d;
+}
+
+.stayedButton.active {
+  color: #ff6b9d;
+}
+
+.cardAuthor {
+  font-family: "swear-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.cardNotes {
+  font-family: "swear-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #000;
+  line-height: 1.5;
+  margin: 0.5rem 0 0 0;
+}
+
+.cardBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.stayedBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #ff6b9d;
+  color: white;
+  border-radius: 12px;
+  font-family: "swear-display", serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.multimediaBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #060864;
+  color: white;
+  border-radius: 12px;
+  font-family: "swear-display", serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: "swear-display", serif;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.sampleDataNotice {
+  background: #fff5f8;
+  border: 2px solid #ff6b9d;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "swear-display", serif;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .kanbanBoard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kanbanContainer {
+    padding: 1rem;
+  }
+  
+  .pageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .kanbanBoard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .column {
+    min-height: auto;
+  }
+  
+  .columnContent {
+    min-height: auto;
+  }
+}
+

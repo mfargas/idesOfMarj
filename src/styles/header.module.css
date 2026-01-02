@@ -26,7 +26,9 @@
 }
 
 .logo{
-    font-family: marshmallow-fluff, sans-serif;
+    font-family: bd-retrocentric, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 4rem;
     color: #060864;
     text-decoration: none;
