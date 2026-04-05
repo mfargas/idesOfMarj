@@ -4,7 +4,7 @@ date: "2025-02-01"
 excerpt: "The shift from linear animation to interactive experiences and why apps are becoming the new medium for animated storytelling."
 category: "Media Studies"
 readTime: "6 min read"
-published: false
+published: true
 ---
 
 # Why apps are replacing traditional animation

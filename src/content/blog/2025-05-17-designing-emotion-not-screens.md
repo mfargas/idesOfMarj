@@ -4,6 +4,7 @@ date: "2025-05-17"
 excerpt: "Shifting focus from pixel-perfect layouts to emotional experiences and how users feel when interacting with digital products."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # Designing emotion, not screens

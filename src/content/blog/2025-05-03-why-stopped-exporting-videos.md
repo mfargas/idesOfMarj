@@ -4,6 +4,7 @@ date: "2025-05-03"
 excerpt: "The shift from pre-rendered video exports to real-time, interactive animation experiences in modern design work."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # Why I stopped exporting videos

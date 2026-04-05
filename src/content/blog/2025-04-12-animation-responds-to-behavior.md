@@ -4,6 +4,7 @@ date: "2025-04-12"
 excerpt: "How modern animations adapt to user actions, creating personalized and context-aware motion experiences."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # This animation responds to behavior

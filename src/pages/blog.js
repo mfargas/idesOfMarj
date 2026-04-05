@@ -1,58 +1,74 @@
 import * as React from 'react'
-import Link from 'next/link'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import * as styles from '../styles/blog.module.css'
+import PostCard from '../components/postCard'
 import { getAllPosts } from '../lib/blog'
+import socialPosts from '../data/socialPosts'
+import * as styles from '../styles/blog.module.css'
+import * as cardStyles from '../styles/postCard.module.css'
+
+const CATEGORIES = ['All', 'Interactive Media', 'Dev Log', 'Animation', 'Storytelling', 'Media Studies']
 
 const Blog = ({ posts }) => {
-    return (
-        <Layout>
-            <Seo title="Blog" />
-            <section className={styles.blogSection}>
-                <div className={styles.blogHeader}>
-                    <h1 className={styles.blogTitle}>IDES OF MARJ</h1>
-                    <p className={styles.blogDescription}>
-                        Thoughts on art, technology, and creative expression
-                    </p>
-                </div>
+  const [activeCategory, setActiveCategory] = React.useState('All')
 
-                <div className={styles.blogGrid}>
-                    {posts.map((post) => (
-                        <Link key={post.slug} href={`/blog/${post.slug}`}>
-                            <article className={styles.blogCard}>
-                                <div className={styles.blogCardContent}>
-                                    <div className={styles.blogCardMeta}>
-                                        <span className={styles.blogCategory}>{post.category}</span>
-                                        <span className={styles.blogDate}>{post.date}</span>
-                                        {post.readTime && (
-                                            <span className={styles.blogReadTime}>{post.readTime}</span>
-                                        )}
-                                    </div>
-                                    <h2 className={styles.blogCardTitle}>{post.title}</h2>
-                                    <p className={styles.blogCardExcerpt}>{post.excerpt}</p>
-                                    <div className={styles.blogCardFooter}>
-                                        <span className={styles.readMore}>Read More →</span>
-                                    </div>
-                                </div>
-                            </article>
-                        </Link>
-                    ))}
-                </div>
-            </section>
-        </Layout>
-    )
+  const filtered = activeCategory === 'All'
+    ? posts
+    : posts.filter((p) => p.category === activeCategory)
+
+  return (
+    <Layout>
+      <Seo title="Posts" description="Animation, storytelling, adaptation, lore — all of it." />
+
+      <div className={styles.page}>
+        <header className={styles.pageHeader}>
+          <h1 className={styles.pageTitle}>IDES OF MARJ</h1>
+          <p className={styles.pageDesc}>
+            Interactive Media · Dev Log · Animation · Storytelling · Medium &amp; Message
+          </p>
+        </header>
+
+        {/* Category filter */}
+        <nav className={styles.filters} aria-label="Filter by category">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              className={`${styles.filterBtn} ${activeCategory === cat ? styles.active : ''}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </nav>
+
+        {/* Post grid */}
+        <div className={cardStyles.grid}>
+          {filtered.map((post) => (
+            <PostCard key={post.id ?? post.slug} post={post} />
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <p className={styles.empty}>No posts in this category yet.</p>
+        )}
+      </div>
+    </Layout>
+  )
 }
 
-// This function gets called at build time for static export
 export async function getStaticProps() {
-    const posts = getAllPosts()
+  const articles = getAllPosts().map((post) => ({
+    ...post,
+    type: 'article',
+  }))
 
-    return {
-        props: {
-            posts
-        }
-    }
+  const social = socialPosts.filter((p) => p.published)
+
+  const posts = [...articles, ...social].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  )
+
+  return { props: { posts } }
 }
 
 export default Blog

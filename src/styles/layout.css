@@ -1,64 +1,133 @@
 @import url("https://use.typekit.net/gaa8hjy.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Input+Sans:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* Light mode (default) */
+/* ─── MARJIELA Design Tokens ──────────────────────────────────────── */
+
+/* Dark mode — default
+   Text: white  |  Logo: rose-300 (#F9A8D4)  |  Base: deep midnight */
 :root {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #f0f0f0;
-  --text-primary: #000000;
-  --text-secondary: #1a1a1a;
-  --text-tertiary: #666666;
-  --text-muted: #888888;
-  --border-color: #e0e0e0;
-  --border-secondary: #e9ecef;
-  --accent-color: #060864;
-  --hover-bg: rgba(6, 8, 100, 0.1);
-  --shadow: rgba(0, 0, 0, 0.08);
-  --shadow-hover: rgba(0, 0, 0, 0.12);
-  --stayed-color: #ff6b9d;
-  --stayed-bg: #fff5f8;
-  --stayed-border: #ff6b9d;
+  /* Backgrounds */
+  --bg-color:         #0A0814;
+  --bg-primary:       #0A0814;
+  --bg-secondary:     rgba(255, 255, 255, 0.05);
+  --bg-tertiary:      rgba(255, 255, 255, 0.09);
+
+  /* Text — strictly white on dark */
+  --text-primary:     #ffffff;
+  --text-secondary:   rgba(255, 255, 255, 0.85);
+  --text-tertiary:    rgba(255, 255, 255, 0.65);
+  --text-muted:       rgba(255, 255, 255, 0.52);
+  --text-subtle:      rgba(255, 255, 255, 0.52);
+  --text-faint:       rgba(255, 255, 255, 0.40);
+  --text-dim:         rgba(255, 255, 255, 0.30);
+
+  /* Accent — dreamy rose (WCAG AA/AAA on dark bg) */
+  --primary-color:    #F9A8D4;
+  --accent-color:     #F9A8D4;
+  --accent-hover:     #F472B6;
+  --hover-bg:         rgba(249, 168, 212, 0.10);
+  --accent-bg:        rgba(249, 168, 212, 0.12);
+  --accent-border:    rgba(249, 168, 212, 0.28);
+
+  /* Borders / surfaces */
+  --surface-line:     rgba(255, 255, 255, 0.10);
+  --border-color:     rgba(255, 255, 255, 0.10);
+  --border-secondary: rgba(255, 255, 255, 0.06);
+
+  /* Shadows */
+  --shadow:           rgba(0, 0, 0, 0.50);
+  --shadow-hover:     rgba(0, 0, 0, 0.70);
+
+  /* Type scale */
+  --text-display:     clamp(2.25rem, 5vw, 4rem);
+  --text-h2:          clamp(1.375rem, 3vw, 2rem);
+  --text-h3:          clamp(1.0625rem, 2vw, 1.25rem);
+  --text-body-lg:     clamp(1rem, 1.5vw, 1.125rem);
+  --text-body:        clamp(0.9375rem, 1.2vw, 1rem);
+  --text-label:       0.75rem;
+
+  /* Layout */
+  --content-max:      900px;
+  --container-max:    1400px;
+  --border-radius:    12px;
+  --header-h:         80px;
 }
 
-/* Dark mode */
+/* Explicit dark class */
 :root.dark {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --bg-tertiary: #3a3a3a;
-  --text-primary: #ffffff;
-  --text-secondary: #e0e0e0;
-  --text-tertiary: #b0b0b0;
-  --text-muted: #888888;
-  --border-color: #404040;
-  --border-secondary: #4a4a4a;
-  --accent-color: #6b7fd7;
-  --hover-bg: rgba(107, 127, 215, 0.2);
-  --shadow: rgba(0, 0, 0, 0.3);
-  --shadow-hover: rgba(0, 0, 0, 0.5);
-  --stayed-color: #ff8fb3;
-  --stayed-bg: rgba(255, 107, 157, 0.15);
-  --stayed-border: #ff8fb3;
+  --bg-color:         #0A0814;
+  --bg-primary:       #0A0814;
+  --bg-secondary:     rgba(255, 255, 255, 0.05);
+  --bg-tertiary:      rgba(255, 255, 255, 0.09);
+  --text-primary:     #ffffff;
+  --text-secondary:   rgba(255, 255, 255, 0.85);
+  --text-tertiary:    rgba(255, 255, 255, 0.65);
+  --text-muted:       rgba(255, 255, 255, 0.52);
+  --text-subtle:      rgba(255, 255, 255, 0.52);
+  --text-faint:       rgba(255, 255, 255, 0.40);
+  --text-dim:         rgba(255, 255, 255, 0.30);
+  --primary-color:    #F9A8D4;
+  --accent-color:     #F9A8D4;
+  --accent-hover:     #F472B6;
+  --hover-bg:         rgba(249, 168, 212, 0.10);
+  --accent-bg:        rgba(249, 168, 212, 0.12);
+  --accent-border:    rgba(249, 168, 212, 0.28);
+  --surface-line:     rgba(255, 255, 255, 0.10);
+  --border-color:     rgba(255, 255, 255, 0.10);
+  --border-secondary: rgba(255, 255, 255, 0.06);
+  --shadow:           rgba(0, 0, 0, 0.50);
+  --shadow-hover:     rgba(0, 0, 0, 0.70);
 }
 
+/* Light mode
+   Text: near-black  |  Logo: deep rose (#9D174D)  |  Base: warm white */
+:root.light {
+  --bg-color:         #FFF8FA;
+  --bg-primary:       #FFF8FA;
+  --bg-secondary:     rgba(0, 0, 0, 0.04);
+  --bg-tertiary:      rgba(0, 0, 0, 0.08);
+  --text-primary:     #0A0A0A;
+  --text-secondary:   rgba(10, 10, 10, 0.84);
+  --text-tertiary:    rgba(10, 10, 10, 0.65);
+  --text-muted:       rgba(10, 10, 10, 0.55);
+  --text-subtle:      rgba(10, 10, 10, 0.55);
+  --text-faint:       rgba(10, 10, 10, 0.45);
+  --text-dim:         rgba(10, 10, 10, 0.28);
+  --primary-color:    #9D174D;
+  --accent-color:     #9D174D;
+  --accent-hover:     #831843;
+  --hover-bg:         rgba(157, 23, 77, 0.08);
+  --accent-bg:        rgba(157, 23, 77, 0.09);
+  --accent-border:    rgba(157, 23, 77, 0.22);
+  --surface-line:     rgba(10, 10, 10, 0.10);
+  --border-color:     rgba(10, 10, 10, 0.10);
+  --border-secondary: rgba(10, 10, 10, 0.06);
+  --shadow:           rgba(0, 0, 0, 0.08);
+  --shadow-hover:     rgba(0, 0, 0, 0.14);
+}
+
+/* ─── Base HTML / Body ─────────────────────────────────────────── */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
-  /* box-shadow: inset 0 0 0 1vw #060864; */
+  /* Solid base — aurora blobs layer on top via fixed-position divs */
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+html.light {
+  background-color: var(--bg-primary);
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
-  font-family: "swear-display", serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 300;
   font-style: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -66,8 +135,130 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: var(--bg-primary);
+  background-color: transparent; /* aurora shows through */
 }
+
+/* ─── Aurora Background System ────────────────────────────────── */
+.aurora-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  will-change: transform;
+}
+
+/* Dark mode blob colors */
+.aurora-blob-1 {
+  width: 65vw;
+  height: 65vw;
+  top: -20vw;
+  left: -15vw;
+  background: radial-gradient(circle, rgba(190, 24, 93, 0.50) 0%, transparent 70%);
+  animation: aurora-drift-1 32s ease-in-out infinite alternate;
+}
+.aurora-blob-2 {
+  width: 55vw;
+  height: 55vw;
+  top: -10vw;
+  right: -10vw;
+  background: radial-gradient(circle, rgba(88, 28, 135, 0.45) 0%, transparent 70%);
+  animation: aurora-drift-2 40s ease-in-out infinite alternate;
+}
+.aurora-blob-3 {
+  width: 60vw;
+  height: 60vw;
+  bottom: -15vw;
+  left: 15vw;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.35) 0%, transparent 70%);
+  animation: aurora-drift-3 36s ease-in-out infinite alternate;
+}
+.aurora-blob-4 {
+  width: 45vw;
+  height: 45vw;
+  top: 35vh;
+  right: 5vw;
+  background: radial-gradient(circle, rgba(157, 23, 77, 0.30) 0%, transparent 70%);
+  animation: aurora-drift-4 44s ease-in-out infinite alternate;
+}
+
+/* Light mode blob colors — soft pink/peach/blush */
+html.light .aurora-blob-1 {
+  background: radial-gradient(circle, rgba(251, 182, 206, 0.85) 0%, transparent 70%);
+}
+html.light .aurora-blob-2 {
+  background: radial-gradient(circle, rgba(254, 205, 211, 0.80) 0%, transparent 70%);
+}
+html.light .aurora-blob-3 {
+  background: radial-gradient(circle, rgba(253, 186, 116, 0.65) 0%, transparent 70%);
+}
+html.light .aurora-blob-4 {
+  background: radial-gradient(circle, rgba(249, 168, 212, 0.75) 0%, transparent 70%);
+}
+
+/* Aurora drift keyframes */
+@keyframes aurora-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(8vw, 6vh) scale(1.08); }
+  100% { transform: translate(3vw, 12vh) scale(0.96); }
+}
+@keyframes aurora-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-9vw, 7vh) scale(1.06); }
+  100% { transform: translate(-4vw, -6vh) scale(1.12); }
+}
+@keyframes aurora-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(6vw, -9vh) scale(0.92); }
+  100% { transform: translate(-7vw, -4vh) scale(1.06); }
+}
+@keyframes aurora-drift-4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-5vw, 7vh) scale(1.10); }
+  100% { transform: translate(5vw, -9vh) scale(0.94); }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob { animation: none; }
+}
+
+/* ─── Global Accessibility: Focus rings ───────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Remove outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Skip-to-content for keyboard navigation ─────────────────── */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--primary-color);
+  color: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 0 0 8px 8px;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+
 article,
 aside,
 details,
@@ -130,8 +321,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -309,8 +500,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -326,8 +517,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -343,8 +534,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -360,8 +551,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -377,8 +568,8 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: bd-retrocentric, sans-serif;
-  font-weight: 400;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 100;
   font-style: normal;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -651,13 +842,10 @@ pre tt:after {
 /* Responsive layout adjustments */
 @media (max-width: 768px) {
   .main-content {
-    margin-left: 0 !important;
-    margin-top: 0 !important;
     padding: 1rem !important;
   }
   
   footer {
-    margin-left: 0 !important;
     padding: 1rem !important;
   }
 }

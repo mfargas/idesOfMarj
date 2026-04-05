@@ -4,6 +4,7 @@ date: "2025-03-15"
 excerpt: "The shift from linear timelines to state-based, interactive animation systems in modern digital experiences."
 category: "Media Studies"
 readTime: "6 min read"
+published: true
 ---
 
 # Animation stopped being linear

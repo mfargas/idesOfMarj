@@ -4,6 +4,7 @@ date: "2025-06-07"
 excerpt: "Why how something works and feels matters more than how it looks in creating meaningful digital experiences."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # Why interaction > visuals

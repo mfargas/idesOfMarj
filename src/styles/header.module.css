@@ -1,57 +1,149 @@
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    background: var(--bg-primary);
-    border-bottom: 1px solid var(--border-color);
+    background: rgba(10, 8, 20, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--surface-line);
     z-index: 1001;
-    margin-bottom: 0;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.headerNav{
-    margin: 0 auto;
-    max-width: 1400px;
-    text-align: left;
-    padding: 1.45rem 1.0875rem;
-    height: 100%;
+:global(html.light) .header {
+    background: rgba(255, 248, 250, 0.82);
+}
+
+/* ── Main nav row ─────────────────────────────────────────────── */
+.headerNav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.5rem;
+    max-width: var(--container-max, 1400px);
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+    height: var(--header-h, 80px);
 }
 
-.logoContainer{
+/* ── Logo ─────────────────────────────────────────────────────── */
+.logoContainer {
     margin: 0;
+    flex-shrink: 0;
 }
 
-.logo{
-    font-family: "swear-display-cilati", serif;
+.logo {
+    font-family: swear-display-cilati, serif;
     font-style: normal;
-    font-weight: 900;
-    font-size: 4rem;
-    color: var(--accent-color);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    color: var(--primary-color);
     text-decoration: none;
     text-transform: lowercase;
     line-height: 1;
-    transition: color 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
-/* Mobile responsive */
+.logo:hover {
+    opacity: 0.75;
+}
+
+.logo:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* ── Desktop nav (hidden on mobile) ──────────────────────────── */
+.navDesktop {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ── Right controls: theme toggle + hamburger ────────────────── */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* ── Hamburger (visible on mobile only) ──────────────────────── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+    background: var(--hover-bg);
+}
+
+.hamburger:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+.bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transform-origin: center;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.bar1Open { transform: translateY(7px) rotate(45deg); }
+.bar2Open { opacity: 0; transform: scaleX(0); }
+.bar3Open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile nav dropdown ──────────────────────────────────────── */
+.mobileNav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(10, 8, 20, 0.94);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid var(--surface-line);
+    padding: 1.5rem clamp(1.5rem, 3vw, 2.5rem) 2rem;
+    animation: slideDown 0.2s ease forwards;
+    z-index: 1000;
+}
+
+:global(html.light) .mobileNav {
+    background: rgba(255, 248, 250, 0.95);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
-    .header {
-        position: static;
-        height: auto;
+    .navDesktop {
+        display: none;
     }
-    
+
+    .hamburger {
+        display: flex;
+    }
+
     .headerNav {
-        text-align: center;
-        justify-content: center;
-        padding: 1rem;
-    }
-    
-    .logo {
-        font-size: 3rem;
+        height: 68px;
     }
 }

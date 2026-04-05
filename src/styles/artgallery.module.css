@@ -5,10 +5,10 @@
     width: 100%;
     height: 150px;
     padding: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: radial-gradient(ellipse at 50% 100%, var(--hover-bg) 0%, rgba(6, 6, 8, 0.95) 100%);
     border-radius: 0;
     margin: 0 0 4rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--surface-line);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: 0.1em;
-    font-family: bd-retrocentric, sans-serif;
+    font-family: forma-djr-banner, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -32,17 +32,17 @@
 
 .galleryTitle {
     font-size: 3rem;
-    color: #060864;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-    font-family: bd-retrocentric, sans-serif;
-    font-weight: 400;
+    font-family: forma-djr-banner, sans-serif;
+    font-weight: 100;
     font-style: normal;
 }
 
 .galleryDescription {
-    font-family: "swear-display-cilati", serif;
+    font-family: forma-djr-banner, sans-serif;
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto 2rem auto;
     font-weight: 400;
@@ -64,23 +64,24 @@
 .searchInput {
     flex: 1;
     padding: 1rem 1.5rem;
-    border: 2px solid #e9ecef;
+    border: 1px solid var(--border-color);
     border-radius: 25px;
     font-size: 1rem;
     outline: none;
     transition: all 0.3s ease;
-    background: white;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 .searchInput:focus {
-    border-color: #060864;
-    box-shadow: 0 0 0 3px rgba(6, 8, 100, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--hover-bg);
 }
 
 .clearSearch {
-    background: #f8f9fa;
-    border: 2px solid #e9ecef;
-    color: #666;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
@@ -90,8 +91,8 @@
 }
 
 .clearSearch:hover {
-    background: #e9ecef;
-    color: #333;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
 }
 
 /* Category Filter Styles */
@@ -105,8 +106,8 @@
 
 .filterButton {
     background: transparent;
-    border: 2px solid #060864;
-    color: #060864;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     font-weight: 600;
@@ -116,14 +117,16 @@
 }
 
 .filterButton:hover {
-    background: #060864;
-    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-primary);
     transform: translateY(-2px);
 }
 
 .activeFilter {
-    background: #060864;
-    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-primary);
 }
 
 .container {
@@ -136,7 +139,7 @@
 }
 
 .galleryItem {
-    background: white;
+    background: var(--bg-secondary);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -151,12 +154,12 @@
 }
 
 .featuredItem {
-    border: 2px solid #667eea;
-    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 4px 16px var(--hover-bg);
 }
 
 .featuredItem:hover {
-    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 24px rgba(255, 185, 45, 0.18);
 }
 
 .itemImage {
@@ -168,11 +171,11 @@
 .imagePlaceholder {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, rgba(255, 185, 45, 0.06) 0%, rgba(255, 185, 45, 0.01) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #060864;
+    color: var(--text-muted);
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
@@ -210,8 +213,8 @@
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
-    background: #060864;
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-primary);
     padding: 0.25rem 0.5rem;
     border-radius: 12px;
     font-size: 0.7rem;
@@ -222,8 +225,9 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: var(--hover-bg);
+    border: 1px solid rgba(255, 185, 45, 0.40);
+    color: var(--primary-color);
     padding: 0.25rem 0.5rem;
     border-radius: 12px;
     font-size: 0.7rem;
@@ -263,8 +267,8 @@
 }
 
 .itemCategory {
-    background: rgba(6, 8, 100, 0.8);
-    color: white;
+    background: var(--hover-bg);
+    color: var(--primary-color);
     padding: 0.15rem 0.4rem;
     border-radius: 8px;
     font-size: 0.6rem;
@@ -317,7 +321,7 @@
 }
 
 .itemLink:hover {
-    color: #667eea;
+    color: var(--primary-color);
     transform: translateX(2px);
 }
 
@@ -326,28 +330,29 @@
     grid-column: 1 / -1;
     text-align: center;
     padding: 4rem 2rem;
-    background: #f8f9fa;
+    background: var(--bg-secondary);
     border-radius: 16px;
+    border: 1px solid var(--surface-line);
     margin: 2rem 0;
 }
 
 .noResults h3 {
-    color: #060864;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-family: bd-retrocentric, sans-serif;
-    font-weight: 400;
+    font-family: forma-djr-banner, sans-serif;
+    font-weight: 100;
     font-style: normal;
 }
 
 .noResults p {
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
 .resetButton {
-    background: #060864;
-    color: white;
+    background: var(--primary-color);
+    color: var(--bg-primary);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -358,7 +363,7 @@
 }
 
 .resetButton:hover {
-    background: #050550;
+    background: var(--accent-hover);
     transform: translateY(-2px);
 }
 

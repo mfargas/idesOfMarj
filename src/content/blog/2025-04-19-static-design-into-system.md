@@ -4,6 +4,7 @@ date: "2025-04-19"
 excerpt: "The process of transforming static mockups into dynamic, interactive systems that respond and adapt."
 category: "Interactive Media"
 readTime: "7 min read"
+published: true
 ---
 
 # Turning a static design into a system

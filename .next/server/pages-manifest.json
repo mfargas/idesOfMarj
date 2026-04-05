@@ -3,6 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/blog": "pages/blog.js",
-  "/media": "pages/media.js",
-  "/about": "pages/about.js"
+  "/contact": "pages/contact.js",
+  "/media/movies": "pages/media/movies.js",
+  "/api/featured-post": "pages/api/featured-post.js",
+  "/": "pages/index.js",
+  "/api/letterboxd": "pages/api/letterboxd.js"
 }

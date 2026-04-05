@@ -57,7 +57,7 @@
 }
 
 .filterLabel {
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(0.875rem, 2vw, 1rem);
@@ -78,7 +78,7 @@
 }
 
 .filterSelect {
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: clamp(0.875rem, 2vw, 1rem);
   padding: 0.625rem 1rem;
   border: 2px solid var(--border-color);
@@ -122,7 +122,7 @@
 }
 
 .clearFilters {
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: clamp(0.875rem, 2vw, 0.9rem);
   padding: 0.625rem 1.25rem;
   background: transparent;
@@ -162,7 +162,7 @@
 }
 
 .pageTitle {
-  font-family: bd-retrocentric, sans-serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(2rem, 5vw, 3rem);
@@ -175,7 +175,7 @@
 }
 
 .kanbanDescription {
-  font-family: "swear-display-cilati", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: var(--text-primary);
   transition: color 0.3s ease;
@@ -236,7 +236,7 @@
 }
 
 .columnTitle {
-  font-family: bd-retrocentric, sans-serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(1.125rem, 3vw, 1.5rem);
@@ -321,7 +321,7 @@
 }
 
 .cardTitle {
-  font-family: bd-retrocentric, sans-serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(1rem, 2.5vw, 1.25rem);
@@ -366,7 +366,7 @@
 }
 
 .cardAuthor {
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(0.8125rem, 2vw, 0.9rem);
@@ -376,7 +376,7 @@
 }
 
 .cardNotes {
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(0.8125rem, 2vw, 0.9rem);
@@ -400,7 +400,7 @@
   background: var(--stayed-color);
   color: var(--bg-primary);
   border-radius: 12px;
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -412,7 +412,7 @@
   background: var(--accent-color);
   color: var(--bg-primary);
   border-radius: 12px;
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -421,7 +421,7 @@
 .loading {
   text-align: center;
   padding: 4rem 2rem;
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: 1.2rem;
   color: var(--text-tertiary);
   transition: color 0.3s ease;
@@ -434,7 +434,7 @@
   padding: 1rem;
   margin-bottom: 2rem;
   text-align: center;
-  font-family: "swear-display", serif;
+  font-family: forma-djr-banner, sans-serif;
   font-size: 0.9rem;
   color: var(--text-tertiary);
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;

@@ -2,8 +2,9 @@
 title: "From Pixar to iOS — the same principles apply"
 date: "2025-03-01"
 excerpt: "How animation principles from feature films translate directly to mobile app interfaces and interactions."
-category: "Media Studies"
+category: "Animation"
 readTime: "7 min read"
+published: true
 ---
 
 # From Pixar to iOS — the same principles apply

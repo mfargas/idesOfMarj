@@ -4,6 +4,7 @@ date: "2025-04-26"
 excerpt: "How animations can remember user interactions and adapt based on past behavior, creating personalized experiences."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # When animation has memory

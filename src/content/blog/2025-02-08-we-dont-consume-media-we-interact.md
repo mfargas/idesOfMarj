@@ -4,6 +4,7 @@ date: "2025-02-08"
 excerpt: "The paradigm shift from passive consumption to active participation in modern media experiences."
 category: "Media Studies"
 readTime: "5 min read"
+published: true
 ---
 
 # We don't consume media — we interact with it

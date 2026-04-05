@@ -2,8 +2,9 @@
 title: "Why progress should be visible"
 date: "2025-06-28"
 excerpt: "The importance of making progress tangible and visible in habit-building apps, and how Ollin achieves this."
-category: "Ollin Highlights"
+category: "Dev Log"
 readTime: "5 min read"
+published: true
 ---
 
 # Why progress should be visible

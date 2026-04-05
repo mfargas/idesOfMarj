@@ -11,7 +11,7 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = React.useState('light')
+  const [theme, setTheme] = React.useState('dark')
   const [mounted, setMounted] = React.useState(false)
 
   // Initialize theme on mount
@@ -26,7 +26,7 @@ export const ThemeProvider = ({ children }) => {
     } else {
       // Check system preference
       const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      setTheme(systemPrefersDark ? 'dark' : 'light')
+      setTheme('dark')
     }
   }, [])
 

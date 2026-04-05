@@ -2,8 +2,9 @@
 title: "Gamification done quietly"
 date: "2025-08-02"
 excerpt: "How Ollin uses subtle gamification elements that enhance motivation without overwhelming or manipulating users."
-category: "Ollin Highlights"
+category: "Dev Log"
 readTime: "6 min read"
+published: true
 ---
 
 # Gamification done quietly

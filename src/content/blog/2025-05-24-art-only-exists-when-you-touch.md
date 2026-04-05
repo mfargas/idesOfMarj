@@ -4,6 +4,7 @@ date: "2025-05-24"
 excerpt: "Exploring interactive art that requires user participation to exist, blurring the line between creator and audience."
 category: "Interactive Media"
 readTime: "6 min read"
+published: true
 ---
 
 # Art that only exists when you touch it

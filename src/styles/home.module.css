@@ -1,0 +1,45 @@
+.feed {
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+  max-width: var(--content-max, 900px);
+  margin: 0 auto;
+}
+
+/* ── "Latest  /  All posts →" row ──────────────────────────────── */
+.feedHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-top: 1px solid var(--surface-line);
+  padding-top: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.feedLabel {
+  font-family: forma-djr-banner, sans-serif;
+  font-size: var(--text-label, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.feedLink {
+  font-family: forma-djr-banner, sans-serif;
+  font-size: var(--text-label, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.feedLink:hover {
+  opacity: 0.7;
+}
+
+.feedLink:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

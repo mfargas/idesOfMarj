@@ -2,8 +2,9 @@
 title: "Why learning needs play"
 date: "2025-07-12"
 excerpt: "How Ollin incorporates playful elements to make habit-building and learning more engaging and effective."
-category: "Ollin Highlights"
+category: "Dev Log"
 readTime: "6 min read"
+published: true
 ---
 
 # Why learning needs play

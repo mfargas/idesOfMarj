@@ -4,6 +4,7 @@ date: "2025-02-22"
 excerpt: "Exploring why responsive, real-time experiences often trump photorealistic rendering in modern digital media."
 category: "Media Studies"
 readTime: "6 min read"
+published: true
 ---
 
 # Why real-time matters more than realism

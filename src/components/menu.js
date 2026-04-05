@@ -1,223 +1,162 @@
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import * as styles from '../styles/menu.module.css'
 
-const Menu = () => {
+const Menu = ({ horizontal = false, onLinkClick }) => {
+    const router = useRouter()
     const [activeDropdown, setActiveDropdown] = React.useState(null)
-    const [blogPosts, setBlogPosts] = React.useState([])
-
-    React.useEffect(() => {
-        // Fetch blog posts from static JSON file (generated at build time)
-        // For now, we'll use known categories
-    }, [])
-
+    const [featuredPost, setFeaturedPost] = React.useState(null)
     const timeoutRef = React.useRef(null)
 
-    const handleMouseEnter = (dropdown) => {
-        // Clear any pending close
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current)
-            timeoutRef.current = null
-        }
-        setActiveDropdown(dropdown)
-    }
+    const isActive = (href) =>
+        router.pathname === href || router.pathname.startsWith(href + '/')
 
-    const handleMouseLeave = (dropdown, e) => {
-        // Longer delay to give users more time to move to the menu (especially for new/slower users)
-        // Check if we're moving to the menu element
-        const relatedTarget = e?.relatedTarget
-        if (relatedTarget) {
-            // Check if moving to menu or any element within menu
-            const menuElement = relatedTarget.closest && relatedTarget.closest(`.${styles.megaMenu}`)
-            if (menuElement) {
-                // Moving to menu, don't close
-                return
-            }
-            // Check if moving to another nav item
-            const navItem = relatedTarget.closest && relatedTarget.closest(`.${styles.navItem}`)
-            if (navItem && navItem !== e.currentTarget) {
-                // Moving to different nav item, close current menu
-                setActiveDropdown(null)
-                return
-            }
-        }
-
-        // Delay closing to allow time to move to menu
-        timeoutRef.current = setTimeout(() => {
-            setActiveDropdown(null)
-            timeoutRef.current = null
-        }, 400) // Increased to 400ms for slower users
-    }
-
-    const handleMenuMouseEnter = (dropdown) => {
-        // Clear timeout when entering menu
-        if (timeoutRef.current) {
-            clearTimeout(timeoutRef.current)
-            timeoutRef.current = null
-        }
-        setActiveDropdown(dropdown)
-    }
-
+    // Fetch featured post once on mount
     React.useEffect(() => {
-        // Cleanup timeout on unmount
-        return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current)
-            }
-        }
+        fetch('/api/featured-post')
+            .then((r) => r.ok ? r.json() : null)
+            .then((data) => { if (data) setFeaturedPost(data) })
+            .catch(() => {})
     }, [])
 
-    // Known blog categories
-    const categories = [
-        'Media Studies',
-        'Interactive Media',
-        'Ollin Highlights'
-    ]
+    // Close on route change
+    React.useEffect(() => { setActiveDropdown(null) }, [router.pathname])
 
-    // Get featured posts (most recent published posts)
-    const featuredPosts = blogPosts.slice(0, 2)
+    React.useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current) }, [])
+
+    const handleMouseEnter = (key) => {
+        if (timeoutRef.current) { clearTimeout(timeoutRef.current); timeoutRef.current = null }
+        setActiveDropdown(key)
+    }
+
+    const handleMouseLeave = (e) => {
+        const related = e?.relatedTarget
+        if (related?.closest?.('[data-megamenu]')) return
+        if (related?.closest?.('[data-navitem]') && related.closest('[data-navitem]') !== e.currentTarget) {
+            setActiveDropdown(null)
+            return
+        }
+        timeoutRef.current = setTimeout(() => { setActiveDropdown(null); timeoutRef.current = null }, 350)
+    }
+
+    const navLinkClass = (href) =>
+        [
+            styles.navLink,
+            horizontal ? styles.navLinkHorizontal : '',
+            isActive(href) ? styles.navLinkActive : '',
+        ].filter(Boolean).join(' ')
+
+    const categories = [
+        'Interactive Media',
+        'Dev Log',
+        'Animation',
+        'Storytelling',
+        'Media Studies',
+    ]
 
     return (
         <menu>
-            <ul className={styles.navMenu}>
+            <ul className={`${styles.navMenu} ${horizontal ? styles.navMenuHorizontal : ''}`}>
+
+                {/* BLOG with mega menu */}
                 <li
                     className={styles.navItem}
+                    data-navitem=""
                     onMouseEnter={() => handleMouseEnter('blog')}
-                    onMouseLeave={(e) => handleMouseLeave('blog', e)}
+                    onMouseLeave={handleMouseLeave}
                 >
-                    <Link className={styles.navLink} href='/blog'> BLOG </Link>
+                    <Link className={navLinkClass('/blog')} href='/blog' onClick={onLinkClick}>
+                        BLOG
+                    </Link>
+
                     {activeDropdown === 'blog' && (
                         <div
                             className={styles.megaMenu}
-                            onMouseEnter={() => handleMenuMouseEnter('blog')}
-                            onMouseLeave={(e) => handleMouseLeave('blog', e)}
+                            data-megamenu=""
+                            onMouseEnter={() => handleMouseEnter('blog')}
+                            onMouseLeave={handleMouseLeave}
                         >
-                            <div className={styles.megaMenuContent}>
-                                <div className={styles.megaMenuSection}>
-                                    <h3 className={styles.megaMenuTitle}>Topics</h3>
-                                    <ul className={styles.megaMenuList}>
-                                        {categories.map((category, index) => (
-                                            <li key={index}>
+                            <div className={styles.megaMenuInner}>
+                                {/* Featured article — far left when present */}
+                                {featuredPost && (
+                                    <div className={styles.featuredCol}>
+                                        <p className={styles.colLabel}>Featured</p>
+                                        <Link
+                                            href={`/blog/${featuredPost.slug}`}
+                                            className={styles.featuredCard}
+                                            onClick={onLinkClick}
+                                        >
+                                            <div className={styles.featuredCardImage}>
+                                                {featuredPost.coverImage ? (
+                                                    <Image
+                                                        src={featuredPost.coverImage}
+                                                        alt={featuredPost.title}
+                                                        fill
+                                                        style={{ objectFit: 'cover' }}
+                                                    />
+                                                ) : (
+                                                    <div className={styles.featuredCardPlaceholder} />
+                                                )}
+                                            </div>
+                                            {featuredPost.category && (
+                                                <span className={styles.featuredCardCategory}>
+                                                    {featuredPost.category}
+                                                </span>
+                                            )}
+                                            <h4 className={styles.featuredCardTitle}>
+                                                {featuredPost.title}
+                                            </h4>
+                                            {featuredPost.excerpt && (
+                                                <p className={styles.featuredCardExcerpt}>
+                                                    {featuredPost.excerpt}
+                                                </p>
+                                            )}
+                                        </Link>
+                                    </div>
+                                )}
+
+                                {/* Topics */}
+                                <div className={styles.topicsCol}>
+                                    <p className={styles.colLabel}>Topics</p>
+                                    <ul className={styles.topicsList}>
+                                        {categories.map((cat) => (
+                                            <li key={cat}>
                                                 <Link
-                                                    href={`/blog?category=${encodeURIComponent(category)}`}
-                                                    className={styles.megaMenuLink}
+                                                    href={`/blog?category=${encodeURIComponent(cat)}`}
+                                                    className={styles.topicLink}
+                                                    onClick={onLinkClick}
                                                 >
-                                                    {category}
+                                                    {cat}
                                                 </Link>
                                             </li>
                                         ))}
-                                        <li>
-                                            <Link
-                                                href="/blog"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                View All Posts
-                                            </Link>
-                                        </li>
                                     </ul>
+                                    <Link href="/blog" className={styles.viewAll} onClick={onLinkClick}>
+                                        View All Posts →
+                                    </Link>
                                 </div>
-                                {featuredPosts.length > 0 && (
-                                    <div className={styles.megaMenuSection}>
-                                        <h3 className={styles.megaMenuTitle}>Featured</h3>
-                                        <div className={styles.featuredPosts}>
-                                            {featuredPosts.map((post) => (
-                                                <Link
-                                                    key={post.slug}
-                                                    href={`/blog/${post.slug}`}
-                                                    className={styles.featuredPost}
-                                                >
-                                                    <div className={styles.featuredPostImage}>
-                                                        <div className={styles.imagePlaceholder}>
-                                                            {post.title.charAt(0)}
-                                                        </div>
-                                                    </div>
-                                                    <div className={styles.featuredPostContent}>
-                                                        <span className={styles.featuredPostCategory}>
-                                                            {post.category}
-                                                        </span>
-                                                        <h4 className={styles.featuredPostTitle}>
-                                                            {post.title}
-                                                        </h4>
-                                                        {post.excerpt && (
-                                                            <p className={styles.featuredPostExcerpt}>
-                                                                {post.excerpt.substring(0, 80)}...
-                                                            </p>
-                                                        )}
-                                                    </div>
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
                             </div>
                         </div>
                     )}
                 </li>
-                <li
-                    className={styles.navItem}
-                    onMouseEnter={() => handleMouseEnter('media')}
-                    onMouseLeave={(e) => handleMouseLeave('media', e)}
-                >
-                    <Link className={styles.navLink} href='/media'> MEDIA LOG </Link>
-                    {activeDropdown === 'media' && (
-                        <div
-                            className={styles.megaMenu}
-                            onMouseEnter={() => handleMenuMouseEnter('media')}
-                            onMouseLeave={(e) => handleMouseLeave('media', e)}
-                        >
-                            <div className={styles.megaMenuContent}>
-                                <div className={styles.megaMenuSection}>
-                                    <h3 className={styles.megaMenuTitle}>Browse by Type</h3>
-                                    <ul className={styles.megaMenuList}>
-                                        <li>
-                                            <Link
-                                                href="/media/books"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                Books
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/media/tv-shows"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                TV Shows
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/media/games"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                Games
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/media/movies"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                Movies
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                href="/media"
-                                                className={styles.megaMenuLink}
-                                            >
-                                                View All Media
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+
+                <li className={styles.navItem}>
+                    <Link className={navLinkClass('/media/movies')} href='/media/movies' onClick={onLinkClick}>
+                        FILM DIARY
+                    </Link>
                 </li>
                 <li className={styles.navItem}>
-                    <Link className={styles.navLink} href='/about'> ABOUT </Link>
+                    <Link className={navLinkClass('/about')} href='/about' onClick={onLinkClick}>
+                        ABOUT
+                    </Link>
+                </li>
+                <li className={styles.navItem}>
+                    <Link className={navLinkClass('/contact')} href='/contact' onClick={onLinkClick}>
+                        CONTACT
+                    </Link>
                 </li>
             </ul>
         </menu>

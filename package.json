@@ -5,12 +5,14 @@
   "version": "1.0.0",
   "author": "Marjoree E. F.",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@supabase/supabase-js": "^2.39.0",
+    "emailjs": "^5.0.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.0.4",
+    "next": "^15.5.14",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0"
   },

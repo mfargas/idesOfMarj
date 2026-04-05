@@ -4,6 +4,7 @@ date: "2025-03-29"
 excerpt: "Exploring programming as an artistic practice and how writing code can be a form of creative expression."
 category: "Media Studies"
 readTime: "7 min read"
+published: true
 ---
 
 # Why code is a creative medium

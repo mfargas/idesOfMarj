@@ -4,6 +4,7 @@ date: "2025-04-05"
 excerpt: "How the concept of a final, complete product has been replaced by continuous iteration and evolution in digital media."
 category: "Media Studies"
 readTime: "6 min read"
+published: true
 ---
 
 # The death of the 'finished product'

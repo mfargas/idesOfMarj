@@ -2,8 +2,9 @@
 title: "Building systems that encourage consistency"
 date: "2025-08-23"
 excerpt: "How Ollin's design and systems are built to naturally encourage consistent habit practice without force or manipulation."
-category: "Ollin Highlights"
+category: "Dev Log"
 readTime: "7 min read"
+published: true
 ---
 
 # Building systems that encourage consistency
